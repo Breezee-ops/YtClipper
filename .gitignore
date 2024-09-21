@@ -1,0 +1,4 @@
+*.mp4
+*.cfg
+venv_stuff/
+timestamps.txt
