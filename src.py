@@ -32,8 +32,8 @@ savefile = "clip"
 it = 0
 
 def convert_time(time_str):
-    minu, sec = map(int, time_str.split(':'))
-    return minu*60 + sec
+    minu, sec = map(float, time_str.split(':'))
+    return minu*60.0 + sec
 
 for i in range(0, len(start_end), 2):
     ffmpeg_extract_subclip(yt_path, convert_time(start_end[i]), convert_time(start_end[i+1]), targetname=savefile+str(it)+".mp4")
