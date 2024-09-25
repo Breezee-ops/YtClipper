@@ -5,7 +5,7 @@ import os
 import sys
 
 def download_yt(link):
-    stream = YouTube(link).streams.first()
+    stream = YouTube(link, client='WEB_CREATOR').streams.first()
     return stream.download(output_path="./", filename="test.mp4")
 
 yt_path = ''
